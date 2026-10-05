@@ -1,0 +1,10 @@
+# Go build and test output
+/bin/
+*.test
+*.out
+testdata/fuzz/
+
+# Key material is never committed
+*.key
+*_kyber
+*_dilithium

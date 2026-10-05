@@ -1,0 +1,92 @@
+KHEPRA SOVEREIGN PUBLIC & COMMERCIAL LICENSE v1.0 (KSCL-1.0)
+
+Copyright (C) 2026 SOUHIMBOU DOH KONE LLC d/b/a NouchiX. All Rights Reserved.
+Exclusively licensed to SecRed Knowledge Inc.
+Patent: U.S. App. No. 63/942,886 (KHEPRA Protocol & Post-Quantum Evidence Weave).
+
+================================================================================
+1. PREAMBLE & LICENSING MODEL
+================================================================================
+
+This License governs the use, modification, distribution, and commercial execution 
+of the PQC-Khepra-MCP Server, the KHEPRA Trust OS kernel, and associated software components.
+
+The KHEPRA platform uses a tiered commercial architecture designed to support open-source 
+community development while safeguarding enterprise post-quantum cryptographic IP, 
+air-gapped defense integrations, and commercial cloud services.
+
+================================================================================
+2. COMMUNITY & EVALUATION GRANT (Tier 1 - Free Use)
+================================================================================
+
+Subject to the terms and conditions of this License, SOUHIMBOU DOH KONE LLC hereby grants 
+you a non-exclusive, worldwide, royalty-free license to:
+
+  a) Inspect, compile, run, and modify the source code for individual development, 
+     academic research, educational purposes, and non-production testing.
+  b) Execute all Community-tier capabilities free of charge, including:
+     - Post-Quantum STIG checks (`pqc_stig`)
+     - Local asset and AI workload discovery (`discover_assets`)
+     - OWASP AI Agent Security Assessments (`owasp_agent_assess`)
+     - NIST SP 800-53 control mappings (`nist_map`)
+     - Basic Proof of Work History recording (`agent_record`)
+     - Threat intelligence lookups (`threat_lookup`)
+  c) Self-host and operate local instances for internal evaluation and personal development.
+
+================================================================================
+3. COMMERCIAL & ENTERPRISE RESTRICTIONS (Tiers 2, 3, & Sovereign)
+================================================================================
+
+Commercial production use, enterprise deployment, and managed service hosting require a 
+valid KHEPRA License Key (`KHEPRA_LICENSE_KEY` or `KHEPRA_LICENSE_PATH`).
+
+  a) COMMERCIAL PRODUCTION GATING:
+     Execution of premium, enterprise, and sovereign capabilities—including but not limited to:
+     - Subnet and Enterprise CIDR AI Discovery (`scan_shadow_ai`)
+     - Post-Quantum Attestation & Signed Evidence DAG Chains (`attest_ai_policy`, `aeo_record`)
+     - Agent Passports (`passport_issue`, `passport_verify`)
+     - CMMC AU/SC and POAM export engines (`khepra_export_poam`, `khepra_export_attestation`)
+     - Autonomous WAF interposition, Sekhem healing, and active interdiction (`interdict`)
+     - FIPS 140-3 BoringCrypto PQC compilation (`GOEXPERIMENT=boringcrypto`)
+     - Multi-tenant fleet governance and SCIF air-gap licensing
+     requires an active commercial subscription (Pro, Sovereign, or Pharaoh tier) 
+     issued directly by SOUHIMBOU DOH KONE LLC or its authorized distributors.
+
+  b) MANAGED SERVICE & SAAS RESTRICTION:
+     You MAY NOT offer, host, or rebrand the PQC-Khepra-MCP Server or KHEPRA Trust OS 
+     as a managed cloud service, Hosted MCP Gateway, or SaaS product to third parties for 
+     commercial gain without an explicit written Commercial Service Provider Agreement 
+     from SOUHIMBOU DOH KONE LLC.
+
+================================================================================
+4. AIR-GAP & SOVEREIGN VALIDATION (Zero-Egress)
+================================================================================
+
+All license validations for Pro, Sovereign, and Pharaoh tiers operate strictly OFFLINE 
+via post-quantum ML-DSA-65 (NIST FIPS 204) signed `.adinkhepra` license artifacts. 
+The software requires zero internet egress, telemetric tracking, or external API calling-home, 
+making it natively compliant with air-gapped, SCIF, and classified defense networks.
+
+================================================================================
+5. PATENT & TRADEMARK RESERVATION
+================================================================================
+
+No patent rights under U.S. App. No. 63/942,886 or trademark rights in "KHEPRA", "AdinKhepra", 
+"SouHimBou", "NouchiX", or "Sekhem" are granted under this License except as explicitly 
+necessary for the execution of the software within the scope granted herein.
+
+================================================================================
+6. DISCLAIMER OF WARRANTY & LIMITATION OF LIABILITY
+================================================================================
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF 
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT ARE DISCLAIMED. 
+
+IN NO EVENT SHALL SOUHIMBOU DOH KONE LLC, SECRED KNOWLEDGE INC., OR THEIR CONTRIBUTORS 
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL 
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY 
+OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR 
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGE.

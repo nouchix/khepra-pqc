@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        fips:
+          - { name: default, gofips140: "", godebug: "" }
+          - { name: fips140-on, gofips140: inprocess, godebug: "fips140=on" }
+          - { name: fips140-only, gofips140: inprocess, godebug: "fips140=only" }
+    name: test (${{ matrix.fips.name }})
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.27.1"
+      - name: gofmt
+        run: test -z "$(gofmt -l .)"
+      - name: vet
+        run: go vet ./...
+      - name: test
+        env:
+          GOFIPS140: ${{ matrix.fips.gofips140 }}
+          GODEBUG: ${{ matrix.fips.godebug }}
+          KHEPRA_FIPS_REQUIRED: ${{ matrix.fips.gofips140 != '' && '1' || '' }}
+        run: go test -count=1 ./...
+      - name: import ban (self-check)
+        run: go run ./cmd/pqc-importban ./...
+
+  fuzz:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.27.1"
+      - run: go test ./envelope -run '^$' -fuzz FuzzOpen -fuzztime 60s
