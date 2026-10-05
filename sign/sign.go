@@ -47,6 +47,9 @@ const (
 	ContextManifest  Context = "khepra/v3/manifest"
 	ContextEnvelope  Context = "khepra/v3/envelope"
 	ContextKEMCert   Context = "khepra/v3/kemcert"
+	// ContextAdinkra is used by the adinkra package's general-purpose Sign
+	// API. Prefer a purpose-specific context in new code.
+	ContextAdinkra Context = "khepra/v3/adinkra"
 )
 
 const contextPrefix = "khepra/v3/"
